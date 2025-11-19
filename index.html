@@ -9,12 +9,15 @@
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #e0f2f7 0%, #c2e0f0 100%); /* Degradado suave */
+            /* --- FONDO DE IMAGEN APLICADO --- */
+            background: url('assets/fondo-ciberseguridad.jpg') no-repeat center center fixed;
+            background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
             color: #333;
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(90deg, #0a3d62 0%, #1a5c8a 100%); /* Degradado más oscuro */
+            /* Encabezado semi-transparente para que se vea un poco el fondo */
+            background: rgba(10, 61, 98, 0.9); 
             color: white;
             padding: 3rem 2rem;
             text-align: center;
@@ -35,7 +38,8 @@
             padding: 2.5rem;
             max-width: 900px;
             margin: 2rem auto;
-            background: white;
+            /* Fondo blanco semi-transparente para la legibilidad */
+            background: rgba(255, 255, 255, 0.95); 
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -71,61 +75,15 @@
         footer {
             text-align: center;
             padding: 2rem;
-            color: #777;
+            color: #ccc; /* Color más claro para que contraste con el fondo oscuro */
             font-size: 0.9em;
             margin-top: 3rem;
+            /* Fondo transparente para que se vea el fondo de la página */
+            background: transparent;
         }
         a {
             color: #1a5c8a;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        a:hover {
-            color: #0a3d62;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>Carlos Villalba</h1>
-    <p>Especialista en Infraestructura, Redes y Seguridad TI</p>
-</header>
-
-<section>
-    <h2>Sobre mí</h2>
-    <p>
-        Profesional en infraestructura TI con experiencia en redes, administración de sistemas,
-        seguridad operativa, cloud y soporte avanzado. Certificado en Azure AZ-900 y fortaleciéndome
-        continuamente en ciberseguridad.
-    </p>
-</section>
-
-<section>
-    <h2>Servicios</h2>
-    <ul>
-        <li>Configuración y troubleshooting de redes LAN/WAN, VLAN y VPN.</li>
-        <li>Administración y hardening de sistemas Windows.</li>
-        <li>Implementación de políticas de seguridad en Microsoft 365 y Azure AD.</li>
-        <li>Gestión de firewalls (Fortinet, WatchGuard).</li>
-        <li>Configuración de UCM630x, routers y dispositivos de red.</li>
-        <li>Soporte TI avanzado y continuidad operativa.</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Proyectos Destacados</h2>
-    <ul>
-        <li>Laboratorio de Azure AD con MFA + RBAC.</li>
-        <li>Topología de red con VLAN y segmentación.</li>
-        <li>Guía de hardening de Windows 10/11.</li>
-        <li>Simulación de políticas de firewall.</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Contacto</h2>
-    <p>Email: <a href="mailto:tuemail@ejemplo.com">contacto.netinversiones@gmail.com
-</a></p>
-    <p>GitHub: <a href="
+        a
