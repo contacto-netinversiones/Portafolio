@@ -1,49 +1,44 @@
-<style>
-    body {
-        font-family: 'Montserrat', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: url('assets/fondo-ciberseguridad.jpg') no-repeat center center fixed;
-        background-size: cover;
-        /* CAMBIO CLAVE 1: Color de texto general a blanco para el header y footer */
-        color: white; 
-        line-height: 1.6;
-    }
-    
-    /* El encabezado (header) ya es semi-transparente y ahora tiene texto blanco */
-    header {
-        background: rgba(10, 61, 98, 0.9); 
-        color: white;
-        padding: 3rem 2rem;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    /* Las secciones de contenido (section) deben tener un fondo blanco */
-    section {
-        padding: 2.5rem;
-        max-width: 900px;
-        margin: 2rem auto;
-        /* CAMBIO CLAVE 2: Fondo blanco semi-transparente */
-        background: rgba(255, 255, 255, 0.95); 
-        border-radius: 20px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        /* CAMBIO CLAVE 3: Color de texto de la sección a negro para que contraste con el fondo blanco */
-        color: #333; 
-    }
-    
-    /* Los títulos dentro de la sección también deben ser oscuros */
-    h2 {
-        color: #0a3d62;
-        font-size: 2em;
-        margin-bottom: 1.5rem;
-        border-bottom: 3px solid #1a5c8a;
-        padding-bottom: 0.5rem;
-        font-weight: 600;
-    }
-
-    /* ... el resto del CSS (ul, li, a, footer) ... */
-</style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio Profesional - Infraestructura, Redes y Ciberseguridad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* RUTA DE LA IMAGEN DE FONDO */
+            background: url('assets/fondo-ciberseguridad.jpg') no-repeat center center fixed;
+            background-size: cover;
+            /* COLOR DE TEXTO DE PRUEBA (AMARILLO) para el header y footer */
+            color: yellow; 
+            line-height: 1.6;
+        }
+        header {
+            /* Encabezado semi-transparente */
+            background: rgba(10, 61, 98, 0.9); 
+            color: white; /* Sobreescribe el amarillo del body para el texto del header */
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        section {
+            padding: 2.5rem;
+            max-width: 900px;
+            margin: 2rem auto;
+            /* Fondo blanco semi-transparente para la legibilidad */
+            background: rgba(255, 255, 255, 0.95); 
+            border-radius: 20px;
