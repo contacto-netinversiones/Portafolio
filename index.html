@@ -1,181 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Portafolio Profesional - Infraestructura, Redes y Ciberseguridad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            /* --- FONDO DE IMAGEN APLICADO --- */
-            background: url('assets/fondo-ciberseguridad.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: rgba(10, 61, 98, 0.9); 
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        header p {
-            font-size: 1.2em;
-            font-weight: 300;
-        }
-        
-        /* ESTILOS GENERALES PARA SECCIONES NORMALES Y ACORDEONES */
-        section, details {
-            padding: 2.5rem;
-            max-width: 900px;
-            margin: 2rem auto;
-            background: rgba(255, 255, 255, 0.95); /* Fondo blanco semi-transparente */
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            display: block;
-        }
+    <meta charset="UTF-8">
+    <title>Portafolio Profesional - Infraestructura, Redes y Ciberseguridad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* --- FONDO DE IMAGEN APLICADO --- */
+            background: url('assets/fondo-ciberseguridad.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: rgba(10, 61, 98, 0.9); 
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        
+        /* ESTILOS GENERALES PARA SECCIONES NORMALES Y ACORDEONES */
+        section, details {
+            padding: 2.5rem;
+            max-width: 900px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.95); /* Fondo blanco semi-transparente */
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: block;
+        }
 
-        /* Hover general para secciones y acordeones */
-        section:hover, details:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-        }
+        /* Hover general para secciones y acordeones */
+        section:hover, details:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
 
-        /* ESTILOS DE TÍTULOS (H2 y SUMMARY) */
-        h2, summary {
-            font-size: 2em;
-            color: #0a3d62;
-            font-weight: 600;
-            border-bottom: 3px solid #1a5c8a;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* ESTILOS ESPECÍFICOS DEL TÍTULO DEL ACORDEÓN (<summary>) */
-        summary {
-            cursor: pointer; /* Indica que es clickeable */
-            list-style: none; /* Oculta la flecha por defecto */
-            position: relative;
-        }
-        
-        /* Ajustamos el margen en secciones normales */
-        section h2 {
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Quitamos el margen inferior en summary cuando está cerrado */
-        details:not([open]) summary {
-             margin-bottom: 0;
-        }
-        
-        /* Flecha apuntando a la derecha (cerrado) */
-        summary::after {
-            content: '▶'; 
-            position: absolute;
-            right: 0;
-            font-size: 0.8em;
-            transition: transform 0.3s ease;
-        }
-        
-        /* Flecha apuntando hacia abajo (abierto) */
-        details[open] summary::after {
-            content: '▼';
-            transform: rotate(0deg);
-        }
-        
-        /* Estilos de contenido */
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            background: #f9f9f9;
-            margin-bottom: 0.8rem;
-            padding: 1rem 1.5rem;
-            border-left: 5px solid #1a5c8a;
-            border-radius: 8px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-        ul li:hover {
-            background: #e6f7ff;
-            transform: translateX(5px);
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #ccc;
-            font-size: 0.9em;
-            margin-top: 3rem;
-            background: transparent;
-        }
-        a {
-            color: #1a5c8a;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #0a3d62;
-            text-decoration: underline;
-        }
-    </style>
+        /* ESTILOS DE TÍTULOS (H2 y SUMMARY) */
+        h2, summary {
+            font-size: 2em;
+            color: #0a3d62;
+            font-weight: 600;
+            border-bottom: 3px solid #1a5c8a;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* ESTILOS ESPECÍFICOS DEL TÍTULO DEL ACORDEÓN (<summary>) */
+        summary {
+            cursor: pointer; /* Indica que es clickeable */
+            list-style: none; /* Oculta la flecha por defecto */
+            position: relative;
+        }
+        
+        /* Ajustamos el margen en secciones normales */
+        section h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Quitamos el margen inferior en summary cuando está cerrado */
+        details:not([open]) summary {
+             margin-bottom: 0;
+        }
+        
+        /* Flecha apuntando a la derecha (cerrado) */
+        summary::after {
+            content: '▶'; 
+            position: absolute;
+            right: 0;
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Flecha apuntando hacia abajo (abierto) */
+        details[open] summary::after {
+            content: '▼';
+            transform: rotate(0deg);
+        }
+        
+        /* Estilos de contenido */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f9f9f9;
+            margin-bottom: 0.8rem;
+            padding: 1rem 1.5rem;
+            border-left: 5px solid #1a5c8a;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        ul li:hover {
+            background: #e6f7ff;
+            transform: translateX(5px);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #ccc;
+            font-size: 0.9em;
+            margin-top: 3rem;
+            background: transparent;
+        }
+        a {
+            color: #1a5c8a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0a3d62;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Carlos Villalba</h1>
-    <p>Especialista en Infraestructura, Redes y Seguridad TI</p>
+    <h1>Carlos Villalba</h1>
+    <p>Especialista en Infraestructura, Redes y Seguridad TI</p>
 </header>
 
 <section>
-    <h2>Sobre mí</h2>
-    <p>
-        Ofrezco soluciones de infraestructura de extremo a extremo diseñadas para garantizar la continuidad del negocio, la máxima disponibilidad de la red y una postura de seguridad robusta. Mi enfoque abarca desde la certificación de la capa física (cableado) hasta la implementación de políticas avanzadas de seguridad perimetral.
-    </p>
+    <h2>Sobre mí</h2>
+    <p>
+        **Ofrezco soluciones de infraestructura de extremo a extremo** diseñadas para garantizar la **continuidad del negocio**, la máxima disponibilidad de la red y una **postura de seguridad robusta**. Mi enfoque abarca desde la **certificación de la capa física (cableado)** hasta la implementación de **políticas avanzadas de seguridad perimetral**.
+    </p>
 </section>
 
 <details>
-    <summary>Servicios</summary>
-    <ul>
-        <li>Configuración y troubleshooting de redes LAN/WAN, VLAN y VPN.</li>
-        <li>Administración y hardening de sistemas Windows.</li>
-        <li>Implementación de políticas de seguridad en Equipos fortigate y Cisco.</li>
-        <li>Gestión de firewalls (Fortinet, WatchGuard).</li>
-        <li>Configuración de UCM630x, routers y dispositivos de red.</li>
-        <li>Soporte TI avanzado y continuidad operativa.</li>
-    </ul>
+    <summary>Servicios</summary>
+    <ul>
+        <li>Configuración y troubleshooting de redes LAN/WAN, VLAN y VPN.</li>
+        <li>Administración y hardening de sistemas Windows.</li>
+        <li>Implementación de políticas de seguridad en Equipos fortigate y Cisco.</li>
+        <li>Gestión de firewalls (Fortinet, WatchGuard).</li>
+        <li>Configuración de UCM630x, routers y dispositivos de red.</li>
+        <li>Soporte TI avanzado y continuidad operativa.</li>
+    </ul>
 </details>
 
 <details>
-    <summary>Proyectos Destacados</summary>
-    <ul>
-        <li>Laboratorio de Azure AD con MFA + RBAC.</li>
-        <li>Topología de red con VLAN y segmentación.</li>
-        <li>Guía de hardening de Windows 10/11.</li>
-        <li>Simulación de políticas de firewall.</li>
-    </ul>
+    <summary>Proyectos Destacados</summary>
+    <ul>
+        <li>Laboratorio de Azure AD con MFA + RBAC.</li>
+        <li>Topología de red con VLAN y segmentación.</li>
+        <li>Guía de hardening de Windows 10/11.</li>
+        <li>Simulación de políticas de firewall.</li>
+    </ul>
 </details>
 
 <section>
-    <h2>Contacto</h2>
-    <p>Email: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
-    <p>GitHub: <a href="https://github.com/Carlucho1985" target="_blank">https://github.com/Carlucho1985</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank">https://linkedin.com/in/tuusuario</a></p>
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
+    <p>GitHub: <a href="https://github.com/Carlucho1985" target="_blank">https://github.com/Carlucho1985</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank">https://linkedin.com/in/tuusuario</a></p>
 </section>
 
 <footer>
-    © 2025 Carlos Villalba
+    © 2025 Carlos Villalba
 </footer>
 
 </body>
-</html>              
+</html>
