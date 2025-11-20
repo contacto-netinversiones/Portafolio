@@ -34,8 +34,8 @@
             font-weight: 300;
         }
         
-        /* ESTILOS GENERALES PARA SECCIONES Y EL ACORDEÓN <details> */
-        section, details {
+        /* ESTILOS GENERALES PARA ACORDEONES (<details>) */
+        details {
             padding: 2.5rem;
             max-width: 900px;
             margin: 2rem auto;
@@ -43,25 +43,143 @@
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            /* Restablecer estilos de details */
             display: block;
         }
 
-        /* Hover general para secciones y details */
-        section:hover, details:hover {
+        /* Hover general para acordeones */
+        details:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
 
-        /* ESTILOS ESPECÍFICOS PARA EL TÍTULO DEL ACORDEÓN */
+        /* ESTILOS ESPECÍFICOS PARA EL TÍTULO DEL ACORDEÓN (<summary>) */
         summary {
             font-size: 2em; /* Mismo tamaño que h2 */
             color: #0a3d62;
             cursor: pointer; /* Indica que es clickeable */
             font-weight: 600;
-            list-style: none; /* Oculta la flecha por defecto */
+            list-style: none; /* Oculta la flecha por defecto del navegador */
             border-bottom: 3px solid #1a5c8a;
             padding-bottom: 0.5rem;
+            
+            /* Configuramos la posición para la flecha personalizada */
+            position: relative;
+        }
+        
+        /* Oculta el borde inferior en el último summary para que solo aparezca si está abierto, pero lo dejamos aquí para que se aplique antes de los contenidos */
+        details:not([open]) summary {
+             margin-bottom: 0; /* No agrega espacio si está cerrado */
+        }
+        
+        /* Agrega margen inferior cuando se abre para separar el título del contenido */
+        details[open] summary {
+            margin-bottom: 1.5rem; 
+        }
+
+        /* Flecha apuntando a la derecha (cerrado) */
+        summary::after {
+            content: '▶'; 
+            position: absolute;
+            right: 0;
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Flecha apuntando hacia abajo (abierto) */
+        details[open] summary::after {
+            content: '▼';
+            transform: rotate(0deg);
+        }
+        
+        /* Estilos de contenido dentro de los acordeones */
+        ul {
+            list-style: none;
+            padding: 0;
+            /* Asegura que la lista se muestre correctamente al abrir */
+            padding-top: 1rem; 
+        }
+        ul li {
+            background: #f9f9f9;
+            margin-bottom: 0.8rem;
+            padding: 1rem 1.5rem;
+            border-left: 5px solid #1a5c8a;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        ul li:hover {
+            background: #e6f7ff;
+            transform: translateX(5px);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #ccc;
+            font-size: 0.9em;
+            margin-top: 3rem;
+            background: transparent;
+        }
+        a {
+            color: #1a5c8a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0a3d62;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Carlos Villalba</h1>
+    <p>Especialista en Infraestructura, Redes y Seguridad TI</p>
+</header>
+
+<details open>
+    <summary>Sobre mí</summary>
+    <p>
+        Profesional en infraestructura TI con experiencia en redes, administración de sistemas,
+        seguridad operativa, cloud y soporte avanzado. Certificado en Azure AZ-900 y fortaleciéndome
+        continuamente en ciberseguridad.
+    </p>
+</details>
+
+<details>
+    <summary>Servicios</summary>
+    <ul>
+        <li>Configuración y troubleshooting de redes LAN/WAN, VLAN y VPN.</li>
+        <li>Administración y hardening de sistemas Windows.</li>
+        <li>Implementación de políticas de seguridad en Equipos fortigate y Cisco.</li>
+        <li>Gestión de firewalls (Fortinet, WatchGuard).</li>
+        <li>Configuración de UCM630x, routers y dispositivos de red.</li>
+        <li>Soporte TI avanzado y continuidad operativa.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>Proyectos Destacados</summary>
+    <ul>
+        <li>Laboratorio de Azure AD con MFA + RBAC.</li>
+        <li>Topología de red con VLAN y segmentación.</li>
+        <li>Guía de hardening de Windows 10/11.</li>
+        <li>Simulación de políticas de firewall.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>Contacto</summary>
+    <p>Email: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
+    <p>GitHub: <a href="https://github.com/Carlucho1985" target="_blank">https://github.com/Carlucho1985</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank">https://linkedin.com/in/tuusuario</a></p>
+</details>
+
+<footer>
+    © 2025 Carlos Villalba
+</footer>
+
+</body>
+</html>            padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
             
             /* Flecha personalizada usando un pseudoelemento */
